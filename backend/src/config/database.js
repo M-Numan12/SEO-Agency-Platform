@@ -1,0 +1,1 @@
+require('dotenv').config();const db={use_env_variable:'DATABASE_URL',dialect:'postgres',logging:false,dialectOptions:process.env.DB_SSL==='true'?{ssl:{require:true,rejectUnauthorized:true}}:{}};module.exports={development:db,test:db,production:db};

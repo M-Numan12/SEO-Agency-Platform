@@ -1,0 +1,1 @@
+const{Service,Blog}=require('../models');exports.services=async(req,res,next)=>{try{res.json(await Service.findAll({where:{isPublished:true},order:[['id','ASC']]}))}catch(e){next(e)}};exports.blogs=async(req,res,next)=>{try{res.json(await Blog.findAll({where:{isPublished:true},attributes:{exclude:['content']},order:[['createdAt','DESC']]}))}catch(e){next(e)}};
