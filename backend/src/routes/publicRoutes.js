@@ -1,1 +1,1 @@
-const router=require('express').Router(),c=require('../controllers/publicController');router.get('/services',c.services);router.get('/blogs',c.blogs);module.exports=router;
+const r=require('express').Router(),c=require('../controllers/contentController');for(const type of ['blogs','services']){r.get('/'+type,c.listPublic(type));r.get('/'+type+'/:slug',c.publicOne(type))}module.exports=r;

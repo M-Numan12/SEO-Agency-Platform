@@ -1,0 +1,1 @@
+module.exports=(db,T)=>db.define('Admin',{id:{type:T.INTEGER,primaryKey:true,autoIncrement:true},email:{type:T.STRING(255),allowNull:false,unique:true},passwordHash:{type:T.STRING(255),allowNull:false}},{tableName:'admins',underscored:true});

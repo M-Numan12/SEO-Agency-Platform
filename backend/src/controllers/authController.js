@@ -1,0 +1,5 @@
+const bcrypt=require('bcryptjs');const jwt=require('jsonwebtoken');const{Admin}=require('../models');
+const cookieOptions={httpOnly:true,secure:process.env.NODE_ENV==='production',sameSite:'lax',path:'/'};
+exports.login=async(req,res)=>{try{const{email,password}=req.body||{};if(typeof email!=='string'||typeof password!=='string'||email.length>255||password.length>1000)return res.status(400).json({error:'Email and password required'});const admin=await Admin.findOne({where:{email:email.trim().toLowerCase()}});const valid=admin&&await bcrypt.compare(password,admin.passwordHash);if(!valid)return res.status(401).json({error:'Invalid credentials'});const token=jwt.sign({},process.env.JWT_SECRET,{subject:String(admin.id),expiresIn:'8h',issuer:'seo-agency',algorithm:'HS256'});res.cookie('agency_session',token,{...cookieOptions,maxAge:8*60*60*1000});res.json({user:{id:admin.id,email:admin.email}})}catch(e){console.error(e);res.status(500).json({error:'Server error'})}};
+exports.me=(req,res)=>res.json({user:{id:req.admin.id,email:req.admin.email}});
+exports.logout=(req,res)=>{res.clearCookie('agency_session',cookieOptions);res.json({message:'Logged out'})};

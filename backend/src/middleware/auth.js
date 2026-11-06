@@ -1,0 +1,3 @@
+const jwt=require('jsonwebtoken');const{Admin}=require('../models');
+exports.requireAdmin=async(req,res,next)=>{try{const token=req.cookies?.agency_session;if(!token)return res.status(401).json({error:'Login required'});const payload=jwt.verify(token,process.env.JWT_SECRET,{algorithms:['HS256'],issuer:'seo-agency'});const admin=await Admin.findByPk(payload.sub);if(!admin)return res.status(401).json({error:'Session invalid'});req.admin=admin;next()}catch(err){return res.status(401).json({error:'Session expired or invalid'})}};
+exports.verifyOrigin=(req,res,next)=>{const origin=req.get('origin');if(origin&&origin!==process.env.FRONTEND_URL)return res.status(403).json({error:'Origin not allowed'});next()};
