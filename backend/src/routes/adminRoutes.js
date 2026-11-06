@@ -1,0 +1,1 @@
+const r=require('express').Router(),c=require('../controllers/contentController');for(const type of ['blogs','services']){r.get('/'+type,c.listAdmin(type));r.get('/'+type+'/:id',c.getAdmin(type));r.post('/'+type,c.create(type));r.put('/'+type+'/:id',c.update(type));r.delete('/'+type+'/:id',c.remove(type))}module.exports=r;

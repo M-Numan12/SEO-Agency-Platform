@@ -1,0 +1,1 @@
+'use strict';module.exports={async up(q,S){await q.createTable('admins',{id:{type:S.INTEGER,primaryKey:true,autoIncrement:true},email:{type:S.STRING(255),allowNull:false,unique:true},password_hash:{type:S.STRING(255),allowNull:false},created_at:{type:S.DATE,allowNull:false},updated_at:{type:S.DATE,allowNull:false}})},async down(q){await q.dropTable('admins')}};
