@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { contact } from '../config/contact.js';
 import './Footer.scss';
 
 export default function Footer() {
@@ -8,7 +9,7 @@ export default function Footer() {
       <div className="container footer-sections">
         <div>
           <h2>
-            elevate<span>.</span>
+            RankShelter<span>.</span>
           </h2>
           <p>
             Building stronger digital foundations through thoughtful SEO, content and
@@ -28,13 +29,28 @@ export default function Footer() {
         </div>
         <div>
           <h4>Let's connect</h4>
-          <p>hello@example.com</p>
-          <p>Serving clients worldwide</p>
+          {contact.email && <a href={'mailto:' + contact.email}>{contact.email}</a>}
+          {contact.phone && (
+            <a href={'tel:' + contact.phone.replace(/[^+\d]/g, '')}>{contact.phone}</a>
+          )}
+          {contact.whatsapp && (
+            <a
+              href={'https://wa.me/' + contact.whatsapp.replace(/\D/g, '')}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp
+            </a>
+          )}
+          {contact.address && <p>{contact.address}</p>}
+          {!contact.email && !contact.phone && !contact.whatsapp && (
+            <Link to="/contact">Contact information coming soon</Link>
+          )}
         </div>
       </div>
       <div className="container copyright">
-        © {new Date().getFullYear()} Elevate Digital. Placeholder brand and contact
-        information.
+        © {new Date().getFullYear()} RankShelter. All rights reserved. Contact details
+        to be finalized before launch.
       </div>
     </footer>
   );

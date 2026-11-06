@@ -27,9 +27,9 @@ export default function AdminLogin() {
   return (
     <main className="admin-login">
       <form onSubmit={submit}>
-        <span className="eyebrow">SECURE ADMIN ACCESS</span>
+        <span className="eyebrow">RANKSHELTER ADMIN ACCESS</span>
         <h1>Welcome back.</h1>
-        <p>Sign in to manage blogs and services.</p>
+        <p>Sign in to manage RankShelter blogs and services.</p>
         <label className="form-control">
           Email
           <input

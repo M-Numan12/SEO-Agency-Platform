@@ -40,7 +40,7 @@ export default function AdminLayout() {
     <div className="admin-shell">
       <aside className="admin-sidebar">
         <Link to="/" className="admin-brand">
-          elevate.
+          RankShelter.
         </Link>
         <small>CONTENT MANAGEMENT</small>
         <nav>
@@ -57,7 +57,7 @@ export default function AdminLayout() {
       </aside>
       <div className="admin-main">
         <header>
-          Admin Panel <span>{user.email}</span>
+          RankShelter Admin Panel <span>{user.email}</span>
         </header>
         <div className="admin-body">
           <Outlet />

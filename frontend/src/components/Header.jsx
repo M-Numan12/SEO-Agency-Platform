@@ -9,13 +9,18 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link to="/" className="brand" onClick={() => setOpen(false)}>
+        <Link
+          to="/"
+          className="brand"
+          onClick={() => setOpen(false)}
+          aria-label="RankShelter home"
+        >
           <span className="brand-logo">
             <TrendingUp />
           </span>
           <span>
-            elevate<b>.</b>
-            <small>DIGITAL STUDIO</small>
+            RankShelter<b>.</b>
+            <small>SEO & DIGITAL MARKETING</small>
           </span>
         </Link>
         <button

@@ -10,26 +10,33 @@ export default function Services() {
   return (
     <main className="container services-page section">
       <div className="page-title">
-        <span className="eyebrow">WHAT WE DO</span>
+        <span className="eyebrow">OUR SERVICES</span>
         <h1>
-          Expertise that moves <em>businesses forward.</em>
+          Services that help your business <em>grow.</em>
         </h1>
-        <p>From technical SEO to content strategy, choose the services that match your ambitions.</p>
+        <p>
+          From technical SEO to content strategy, choose the services that match your
+          ambitions.
+        </p>
       </div>
 
-      {loading ? (
-        <p>Loading services...</p>
-      ) : error ? (
-        <p className="notice">{error}</p>
-      ) : Array.isArray(data) && data.length > 0 ? (
-        <div className="services-list">
-          {data.map((s, i) => (
-            <ServiceCard key={s.id} item={s} index={i} />
-          ))}
-        </div>
-      ) : (
-        <p>No published services yet.</p>
+      {loading && <p role="status">Loading services...</p>}
+      {error && (
+        <p className="notice" role="alert">
+          Unable to load services: {error}
+        </p>
       )}
+      {!loading &&
+        !error &&
+        (Array.isArray(data) && data.length > 0 ? (
+          <div className="services-grid services-list">
+            {data.map((item, index) => (
+              <ServiceCard key={item.id} item={item} index={index} />
+            ))}
+          </div>
+        ) : (
+          <p>No published services available yet.</p>
+        ))}
     </main>
   );
 }

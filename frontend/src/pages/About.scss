@@ -1,1 +1,63 @@
-﻿.about-hero{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center;min-height:550px}.about-hero h1{font-size:clamp(3rem,5vw,5rem);line-height:1.13;letter-spacing:-.065em;margin:20px 0}.about-hero p{line-height:1.9;font-size:18px;color:#6b838d}.about-art{background:linear-gradient(130deg,#092b40,#0d9c8a);border-radius:24px;min-height:320px;color:#9cf0d0;display:flex;align-items:center;justify-content:center;gap:25px}.about-art span{font-size:28px;font-weight:800}.about-values{padding:90px 0;background:#f0f8f6}.about-values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:35px}.about-values-grid>div{background:white;border-radius:16px;padding:30px}.about-values-grid svg{color:#0aa97d}.about-values-grid p{color:#71818b;line-height:1.8}@media(max-width:720px){.about-hero,.about-values-grid{grid-template-columns:1fr}.about-hero{gap:20px}}
+.about-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  min-height: 550px;
+}
+.about-hero h1 {
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 1.13;
+  letter-spacing: -0.065em;
+  margin: 20px 0;
+}
+.about-hero p {
+  line-height: 1.9;
+  font-size: 18px;
+  color: #6b838d;
+}
+.about-art {
+  background: linear-gradient(130deg, #092b40, #0d9c8a);
+  border-radius: 24px;
+  min-height: 320px;
+  color: #9cf0d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+.about-art span {
+  font-size: 28px;
+  font-weight: 800;
+}
+.about-values {
+  padding: 90px 0;
+  background: #f0f8f6;
+}
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 35px;
+}
+.about-values-grid > div {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+}
+.about-values-grid svg {
+  color: #0aa97d;
+}
+.about-values-grid p {
+  color: #71818b;
+  line-height: 1.8;
+}
+@media (max-width: 720px) {
+  .about-hero,
+  .about-values-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-hero {
+    gap: 20px;
+  }
+}

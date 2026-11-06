@@ -10,7 +10,7 @@ export default function Blogs() {
   return (
     <main className="container blog-page section">
       <div className="page-title">
-        <span className="eyebrow">THE JOURNAL</span>
+        <span className="eyebrow">OUR INSIGHTS</span>
         <h1>
           Insights for <em>what's next.</em>
         </h1>
