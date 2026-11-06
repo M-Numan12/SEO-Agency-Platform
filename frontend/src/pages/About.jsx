@@ -1,0 +1,1 @@
+import React from 'react';import './About.scss';export default function About(){return <main className="container section about-page"><div className="page-title"><span className="eyebrow">ABOUT US</span><h1>Helping ambitious brands <em>grow.</em></h1><p>We combine strategy, search expertise and creativity to build lasting digital growth.</p></div></main>}
