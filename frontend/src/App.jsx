@@ -1,1 +1,55 @@
-import React from 'react';import{Routes,Route}from'react-router-dom';import Header from './components/Header.jsx';import Footer from './components/Footer.jsx';import Home from './pages/Home.jsx';import About from './pages/About.jsx';import Services from './pages/Services.jsx';import ServiceDetail from './pages/ServiceDetail.jsx';import Blogs from './pages/Blogs.jsx';import BlogDetail from './pages/BlogDetail.jsx';import Contact from './pages/Contact.jsx';import NotFound from './pages/NotFound.jsx';import AdminLogin from './pages/admin/AdminLogin.jsx';import AdminLayout from './pages/admin/AdminLayout.jsx';import AdminDashboard from './pages/admin/AdminDashboard.jsx';import AdminBlogs from './pages/admin/AdminBlogs.jsx';import AdminServices from './pages/admin/AdminServices.jsx';export default function App(){return <Routes><Route path="/admin/login" element={<AdminLogin/>}/><Route path="/admin" element={<AdminLayout/>}><Route index element={<AdminDashboard/>}/><Route path="blogs" element={<AdminBlogs/>}/><Route path="services" element={<AdminServices/>}/></Route><Route path="*" element={<><Header/><Routes><Route path="/" element={<Home/>}/><Route path="/about" element={<About/>}/><Route path="/services" element={<Services/>}/><Route path="/services/:slug" element={<ServiceDetail/>}/><Route path="/blog" element={<Blogs/>}/><Route path="/blog/:slug" element={<BlogDetail/>}/><Route path="/contact" element={<Contact/>}/><Route path="*" element={<NotFound/>}/></Routes><Footer/></>}/></Routes>}
+import React from 'react';
+import { Routes, Route, Outlet } from 'react-router-dom';
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
+import Home from './pages/Home.jsx';
+import About from './pages/About.jsx';
+import Services from './pages/Services.jsx';
+import ServiceDetail from './pages/ServiceDetail.jsx';
+import Blogs from './pages/Blogs.jsx';
+import BlogDetail from './pages/BlogDetail.jsx';
+import Contact from './pages/Contact.jsx';
+import NotFound from './pages/NotFound.jsx';
+import AdminLogin from './pages/admin/AdminLogin.jsx';
+import AdminLayout from './pages/admin/AdminLayout.jsx';
+import AdminDashboard from './pages/admin/AdminDashboard.jsx';
+import AdminBlogs from './pages/admin/AdminBlogs.jsx';
+import AdminServices from './pages/admin/AdminServices.jsx';
+
+function PublicLayout() {
+  return (
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      {/* Admin Authentication */}
+      <Route path="/admin/login" element={<AdminLogin />} />
+
+      {/* Admin Dashboard */}
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route index element={<AdminDashboard />} />
+        <Route path="blogs" element={<AdminBlogs />} />
+        <Route path="services" element={<AdminServices />} />
+      </Route>
+
+      {/* Public Pages */}
+      <Route element={<PublicLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/:slug" element={<ServiceDetail />} />
+        <Route path="/blog" element={<Blogs />} />
+        <Route path="/blog/:slug" element={<BlogDetail />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
+  );
+}

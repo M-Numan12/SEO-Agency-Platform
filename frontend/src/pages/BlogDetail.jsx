@@ -1,1 +1,31 @@
-import React from'react';import{useParams,Link}from'react-router-dom';import useContent from'../hooks/useContent';import{getBlog}from'../services/api';import './BlogDetail.scss';export default function BlogDetail(){const{slug}=useParams();const{data,loading,error}=useContent(()=>getBlog(slug),slug);return <article className="blog-detail container section">{loading?'Loading article...':error?<p className="notice">{error}</p>:<><span className="eyebrow">{data?.category}</span><h1>{data?.title}</h1><p className="intro">{data?.excerpt}</p>{data?.imageUrl&&<img src={data.imageUrl} alt={data.title}/>}<div className="detail-body">{data?.content}</div><Link to="/blog" className="button button-light">Back to Blog</Link></>}</article>}
+import React from 'react';
+import { useParams, Link } from 'react-router-dom';
+import useContent from '../hooks/useContent.js';
+import { getBlog } from '../services/api.js';
+import './BlogDetail.scss';
+
+export default function BlogDetail() {
+  const { slug } = useParams();
+  const { data, loading, error } = useContent(() => getBlog(slug), slug);
+
+  return (
+    <article className="blog-detail container section">
+      {loading ? (
+        'Loading article...'
+      ) : error ? (
+        <p className="notice">{error}</p>
+      ) : (
+        <>
+          <span className="eyebrow">{data?.category}</span>
+          <h1>{data?.title}</h1>
+          <p className="intro">{data?.excerpt}</p>
+          {data?.imageUrl && <img src={data.imageUrl} alt={data?.title || 'Blog image'} />}
+          <div className="detail-body">{data?.content}</div>
+          <Link to="/blog" className="button button-light">
+            Back to Blog
+          </Link>
+        </>
+      )}
+    </article>
+  );
+}

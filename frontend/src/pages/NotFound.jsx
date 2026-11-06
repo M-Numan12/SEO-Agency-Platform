@@ -1,0 +1,15 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './NotFound.scss';
+
+export default function NotFound() {
+  return (
+    <main className="not-found container section">
+      <h1>404</h1>
+      <h2>We couldn't find that page.</h2>
+      <Link className="button button-dark" to="/">
+        Back to Home
+      </Link>
+    </main>
+  );
+}
