@@ -19,14 +19,14 @@ export default function Blogs() {
 
       {loading ? (
         <p>Loading articles...</p>
-      ) : error ? (
-        <p className="notice">{error}</p>
       ) : Array.isArray(data) && data.length > 0 ? (
-        <div className="blog-list">
+        <div className="blog-list blogs-grid">
           {data.map((b, i) => (
-            <BlogCard key={b.id} item={b} index={i} />
+            <BlogCard key={b.id || b.slug} item={b} index={i} />
           ))}
         </div>
+      ) : error ? (
+        <p className="notice">{error}</p>
       ) : (
         <p>No published articles yet.</p>
       )}

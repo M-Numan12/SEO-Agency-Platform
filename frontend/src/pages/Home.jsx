@@ -74,15 +74,16 @@ export default function Home() {
         </div>
         {services.loading ? (
           <p>Loading services...</p>
+        ) : Array.isArray(services.data) && services.data.length > 0 ? (
+          <div className="content-grid">
+            {services.data.slice(0, 6).map((s, i) => (
+              <ServiceCard key={s.id || s.slug} item={s} index={i} />
+            ))}
+          </div>
         ) : services.error ? (
           <p className="notice">Services unavailable. Please try again later.</p>
         ) : (
-          <div className="content-grid">
-            {Array.isArray(services.data) &&
-              services.data
-                .slice(0, 6)
-                .map((s, i) => <ServiceCard key={s.id} item={s} index={i} />)}
-          </div>
+          <p>No published services available yet.</p>
         )}
         <div className="center">
           <Link className="button button-light" to="/services">
@@ -133,15 +134,16 @@ export default function Home() {
         </div>
         {blogs.loading ? (
           <p>Loading blogs...</p>
+        ) : Array.isArray(blogs.data) && blogs.data.length > 0 ? (
+          <div className="content-grid">
+            {blogs.data.slice(0, 3).map((b, i) => (
+              <BlogCard key={b.id || b.slug} item={b} index={i} />
+            ))}
+          </div>
         ) : blogs.error ? (
           <p className="notice">Blogs unavailable. Please try again later.</p>
         ) : (
-          <div className="content-grid">
-            {Array.isArray(blogs.data) &&
-              blogs.data
-                .slice(0, 3)
-                .map((b, i) => <BlogCard key={b.id} item={b} index={i} />)}
-          </div>
+          <p>No published articles available yet.</p>
         )}
         <div className="center">
           <Link className="button button-light" to="/blog">

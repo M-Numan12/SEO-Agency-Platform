@@ -21,22 +21,19 @@ export default function Services() {
       </div>
 
       {loading && <p role="status">Loading services...</p>}
-      {error && (
+      {!loading && Array.isArray(data) && data.length > 0 ? (
+        <div className="services-grid services-list">
+          {data.map((item, index) => (
+            <ServiceCard key={item.id || item.slug} item={item} index={index} />
+          ))}
+        </div>
+      ) : error ? (
         <p className="notice" role="alert">
           Unable to load services: {error}
         </p>
+      ) : (
+        !loading && <p>No published services available yet.</p>
       )}
-      {!loading &&
-        !error &&
-        (Array.isArray(data) && data.length > 0 ? (
-          <div className="services-grid services-list">
-            {data.map((item, index) => (
-              <ServiceCard key={item.id} item={item} index={index} />
-            ))}
-          </div>
-        ) : (
-          <p>No published services available yet.</p>
-        ))}
     </main>
   );
 }
