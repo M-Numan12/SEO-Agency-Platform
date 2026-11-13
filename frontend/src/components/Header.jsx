@@ -2,17 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X, TrendingUp, ArrowUpRight, ChevronDown, ArrowRight } from 'lucide-react';
 import { getServices } from '../services/api';
+import { defaultServices } from '../data/defaultContent.js';
 import './Header.scss';
-
-// Initial menu while the API is loading. Published services from PostgreSQL replace these.
-const defaultServices = [
-  { name: 'Search Engine Optimization', slug: 'search-engine-optimization' },
-  { name: 'Link Building', slug: 'link-building' },
-  { name: 'Content Marketing', slug: 'content-marketing' },
-  { name: 'Social Media Marketing', slug: 'social-media-marketing' },
-  { name: 'Guest Posting', slug: 'guest-posting' },
-  { name: 'Technical SEO', slug: 'technical-seo' },
-];
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);

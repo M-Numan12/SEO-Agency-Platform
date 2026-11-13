@@ -7,7 +7,8 @@ import {
   Target,
   Globe2,
   ChartNoAxesCombined,
-  ArrowUpRight
+  ArrowUpRight,
+  Sparkles
 } from 'lucide-react';
 import './ServiceCard.scss';
 
@@ -25,13 +26,21 @@ export default function ServiceCard({ item, index = 0 }) {
 
   return (
     <Link className="service-card" to={'/services/' + item.slug}>
-      <span className="service-icon">
-        <Icon size={25} />
-      </span>
-      <span className="service-count">{String(index + 1).padStart(2, '0')}</span>
+      <div className="card-top-row">
+        <span className="service-icon">
+          <Icon size={24} />
+        </span>
+        {item.badge ? (
+          <span className="service-badge">
+            <Sparkles size={12} /> {item.badge}
+          </span>
+        ) : (
+          <span className="service-count">{String(index + 1).padStart(2, '0')}</span>
+        )}
+      </div>
       <h3>{item.name}</h3>
       <p>{item.description}</p>
-      <strong>
+      <strong className="service-link-label">
         Explore Service <ArrowUpRight size={16} />
       </strong>
     </Link>

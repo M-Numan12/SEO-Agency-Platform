@@ -1,1 +1,288 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');:root{font-family:'DM Sans',sans-serif;color:#142c39;background:white}*{box-sizing:border-box}body{margin:0}a{text-decoration:none;color:inherit}button,input,textarea{font:inherit}button{cursor:pointer}h1,h2,h3{font-family:Manrope,sans-serif}h1,h2,h3,p{margin-top:0}h2{font-size:clamp(2.25rem,4vw,3.6rem);line-height:1.16;letter-spacing:-.055em}h2 em,h1 em{font-style:normal;color:#0ba87c}.container{width:min(1160px,calc(100% - 42px));margin:auto}.section{padding:95px 0}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:10px;font-size:14px;font-weight:800;border:0;transition:transform .2s}.button:hover{transform:translateY(-2px)}.button-dark{background:#133a4b;color:white}.button-green{background:#26d2a0;color:#0a3740}.button-light{border:1px solid #d6e4e6;color:#194650;background:white}.button-outline{border:1px solid #7296a4;color:white}.eyebrow{display:inline-block;color:#14b88a;font-size:11px;letter-spacing:.17em;font-weight:900}.section-title{text-align:center;max-width:740px;margin:0 auto 45px}.section-title h2{margin:18px 0}.section-title p,.muted{color:#708692;font-size:16px;line-height:1.8}.center{text-align:center;margin-top:36px}.notice{color:#7f5f33;background:#fff7e6;padding:18px;border-radius:10px}.page-title{padding:85px 0 45px;text-align:center}.page-title h1{font-size:clamp(2.6rem,5vw,4.5rem);letter-spacing:-.07em;line-height:1.14;margin:20px 0}.page-title p{color:#778993;line-height:1.8;max-width:650px;margin:auto}.detail-body{white-space:pre-wrap;color:#485e68;font-size:17px;line-height:1.9}.form-control{display:grid;gap:8px;font-size:13px;font-weight:800;color:#35505b}.form-control input,.form-control textarea,.form-control select{border:1px solid #d1e0e2;border-radius:9px;padding:12px;background:white;width:100%;color:#173744}.form-control textarea{min-height:145px}.form-error{color:#ae302e;font-size:13px}@media(max-width:720px){.section{padding:70px 0}.page-title{padding:65px 0 35px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #142c39;
+  background: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Manrope', 'DM Sans', sans-serif;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: clamp(2.25rem, 4vw, 3.6rem);
+  line-height: 1.16;
+  letter-spacing: -0.055em;
+
+  em {
+    font-style: normal;
+    color: #0ba87c;
+  }
+}
+
+h1 em {
+  font-style: normal;
+  color: #0ba87c;
+}
+
+.container {
+  width: min(1180px, calc(100% - 48px));
+  margin: auto;
+}
+
+.section {
+  padding: 95px 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  border: 0;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(11, 48, 64, 0.12);
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+}
+
+.button-dark {
+  background: #113848;
+  color: white;
+
+  &:hover {
+    background: #092633;
+  }
+}
+
+.button-dark-sm {
+  background: #113848;
+  color: white;
+  padding: 10px 18px;
+  font-size: 13px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  border: 0;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    background: #092633;
+  }
+}
+
+.button-green {
+  background: #25d4a1;
+  color: #072a31;
+
+  &:hover {
+    background: #39e3b1;
+  }
+}
+
+.button-light {
+  border: 1px solid #d5e5e8;
+  color: #194650;
+  background: white;
+
+  &:hover {
+    border-color: #2ed5a4;
+    color: #0ba87c;
+  }
+}
+
+.button-outline {
+  border: 1px solid #6b95a5;
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  color: #14b88a;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 55px;
+
+  h2 {
+    margin: 14px 0 18px;
+    letter-spacing: -0.055em;
+  }
+
+  p,
+  .muted {
+    color: #69838f;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
+
+.center {
+  text-align: center;
+  margin-top: 42px;
+}
+
+.notice {
+  color: #7f5f33;
+  background: #fff7e6;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #fae1b4;
+}
+
+.loading-state {
+  text-align: center;
+  color: #7994a0;
+  font-size: 15px;
+  padding: 40px 0;
+}
+
+.page-title {
+  padding: 85px 0 45px;
+  text-align: center;
+
+  h1 {
+    font-size: clamp(2.6rem, 5vw, 4.5rem);
+    letter-spacing: -0.07em;
+    line-height: 1.14;
+    margin: 20px 0;
+  }
+
+  p {
+    color: #778993;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: auto;
+  }
+}
+
+.detail-body {
+  white-space: pre-wrap;
+  color: #485e68;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.form-control {
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #35505b;
+
+  input,
+  textarea,
+  select {
+    border: 1px solid #d1e0e2;
+    border-radius: 10px;
+    padding: 12px 14px;
+    background: white;
+    width: 100%;
+    color: #173744;
+    outline: none;
+    transition: border-color 0.2s;
+
+    &:focus {
+      border-color: #0ba87c;
+    }
+  }
+
+  textarea {
+    min-height: 145px;
+  }
+}
+
+.form-error {
+  color: #ae302e;
+  font-size: 13px;
+}
+
+.spin {
+  animation: spinAnim 1s linear infinite;
+}
+
+@keyframes spinAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 70px 0;
+  }
+  .page-title {
+    padding: 65px 0 35px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
