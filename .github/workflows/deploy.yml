@@ -29,6 +29,7 @@ jobs:
       - name: 📄 Ensure .htaccess exists in build output
         run: |
           cat << 'EOF' > frontend/dist/.htaccess
+          DirectoryIndex index.html index.php
           <IfModule mod_rewrite.c>
             RewriteEngine On
             RewriteBase /
@@ -48,4 +49,3 @@ jobs:
           local-dir: ./frontend/dist/
           server-dir: ./public_html/
           dangerous-clean-slate: false
-
