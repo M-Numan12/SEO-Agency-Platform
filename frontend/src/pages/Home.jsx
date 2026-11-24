@@ -32,7 +32,7 @@ import useContent from '../hooks/useContent.js';
 import ServiceCard from '../components/ServiceCard.jsx';
 import BlogCard from '../components/BlogCard.jsx';
 import { contact } from '../config/contact.js';
-import { caseStudies } from '../data/defaultContent.js';
+import { saveInquiry } from '../services/inquiries.js';
 import './Home.scss';
 
 export default function Home() {
@@ -88,6 +88,12 @@ export default function Home() {
 
   function handleContactSubmit(e) {
     e.preventDefault();
+    saveInquiry({
+      name: formName,
+      email: formEmail,
+      message: formMsg,
+      service: 'General AI & SEO Growth Inquiry',
+    });
     setFormSent(true);
   }
 
@@ -396,7 +402,7 @@ export default function Home() {
           <p className="loading-state">Loading services...</p>
         ) : Array.isArray(services.data) && services.data.length > 0 ? (
           <div className="content-grid">
-            {services.data.slice(0, 6).map((s, i) => (
+            {services.data.slice(0, 8).map((s, i) => (
               <ServiceCard key={s.id || s.slug} item={s} index={i} />
             ))}
           </div>
@@ -408,7 +414,7 @@ export default function Home() {
 
         <div className="center">
           <Link className="button button-light" to="/services">
-            Explore All 6 Full Service Architectures <ArrowUpRight size={17} />
+            Explore All 8 Specialized Architectures <ArrowUpRight size={17} />
           </Link>
         </div>
       </section>
@@ -562,34 +568,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. PROVEN RESULTS & CASE STUDIES */}
-      <section className="section container home-case-studies">
-        <div className="section-title">
-          <span className="eyebrow">VERIFIED PERFORMANCE</span>
-          <h2>
-            Compounding results for <em>modern leaders.</em>
-          </h2>
-          <p>Real organic revenue growth delivered with precision engineering.</p>
-        </div>
-
-        <div className="case-grid">
-          {caseStudies.map((cs, idx) => (
-            <div className="case-card" key={idx}>
-              <div className="case-head">
-                <span className="client-badge">{cs.client}</span>
-                <span className="case-duration">{cs.duration}</span>
-              </div>
-              <div className="case-growth">
-                <h2>{cs.growth}</h2>
-                <small>{cs.metric}</small>
-              </div>
-              <p className="case-detail">{cs.detail}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 6. ABOUT SECTION */}
+      {/* 5. ABOUT SECTION */}
       <section className="section container home-about-section" id="about">
         <div className="about-split">
           <div className="about-text-col">

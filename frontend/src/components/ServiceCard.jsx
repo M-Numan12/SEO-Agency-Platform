@@ -1,28 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Search,
-  Link2,
+  FileSearch,
+  FileCheck,
   PenTool,
-  Target,
-  Globe2,
-  ChartNoAxesCombined,
+  Link2,
+  Globe,
+  FilePlus2,
+  Network,
+  Megaphone,
+  Search,
   ArrowUpRight,
   Sparkles
 } from 'lucide-react';
 import './ServiceCard.scss';
 
 const icons = {
-  search: Search,
+  audit: FileSearch,
+  onpage: FileCheck,
+  writing: PenTool,
   link: Link2,
+  guestpost: Globe,
+  insertion: FilePlus2,
+  pbn: Network,
+  pr: Megaphone,
+  search: Search,
   content: PenTool,
-  social: Target,
-  globe: Globe2,
-  analytics: ChartNoAxesCombined
+  social: Megaphone,
+  globe: Globe,
+  analytics: FileSearch,
 };
 
 export default function ServiceCard({ item, index = 0 }) {
-  const Icon = icons[item.icon] || Search;
+  const Icon = icons[item.icon] || icons[item.slug] || Search;
 
   return (
     <Link className="service-card" to={'/services/' + item.slug}>
@@ -41,7 +51,7 @@ export default function ServiceCard({ item, index = 0 }) {
       <h3>{item.name}</h3>
       <p>{item.description}</p>
       <strong className="service-link-label">
-        Explore Service <ArrowUpRight size={16} />
+        Explore Architecture <ArrowUpRight size={16} />
       </strong>
     </Link>
   );

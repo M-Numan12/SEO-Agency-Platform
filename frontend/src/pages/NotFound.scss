@@ -1,13 +1,135 @@
-.not-found {
-  min-height: 65vh;
-  text-align: center;
+.not-found-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+
+  .not-found-card {
+    position: relative;
+    background: #082230;
+    color: white;
+    border-radius: 28px;
+    padding: 65px 45px;
+    max-width: 720px;
+    text-align: center;
+    box-shadow: 0 24px 60px rgba(6, 32, 45, 0.22);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    .not-found-glow {
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(52, 223, 170, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(52, 223, 170, 0.15);
+      color: #34dfaa;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: clamp(4.5rem, 9vw, 7.5rem);
+      font-weight: 900;
+      letter-spacing: -0.06em;
+      line-height: 1;
+      margin: 0 0 16px;
+      color: #34dfaa;
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      color: white;
+      position: relative;
+      z-index: 1;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #a4c4cf;
+      max-width: 520px;
+      margin: 0 auto 35px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .not-found-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 35px;
+      position: relative;
+      z-index: 1;
+
+      .button-outline-dark {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: white;
+
+        &:hover {
+          background: rgba(52, 223, 170, 0.15);
+          border-color: #34dfaa;
+          color: #34dfaa;
+        }
+      }
+    }
+
+    .not-found-shortcuts {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #7d9da9;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 25px;
+      position: relative;
+      z-index: 1;
+
+      span:first-child {
+        color: #9cb8c5;
+        font-weight: 600;
+      }
+
+      a {
+        color: #34dfaa;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
-.not-found h1 {
-  font-size: 100px;
-  color: #16b789;
-  margin: 0;
-}
-.not-found h2 {
-  font-size: 30px;
-  margin: 0 0 30px;
+
+@media (max-width: 600px) {
+  .not-found-page .not-found-card {
+    padding: 40px 22px;
+  }
 }

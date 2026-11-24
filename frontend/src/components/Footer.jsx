@@ -34,12 +34,15 @@ export default function Footer() {
         </div>
 
         <div className="footer-links-col">
-          <h4>Capabilities</h4>
-          <Link to="/services">AI & Generative SEO (GEO)</Link>
-          <Link to="/services">Autonomous 24/7 Monitoring</Link>
-          <Link to="/services">Authority Link Building</Link>
-          <Link to="/services">High-Intent Content Architecture</Link>
-          <Link to="/services">Core Web Vitals & Technical SEO</Link>
+          <h4>Services</h4>
+          <Link to="/services/website-audit">Website Audit</Link>
+          <Link to="/services/on-page-seo">On-Page SEO</Link>
+          <Link to="/services/digital-pr">Digital PR</Link>
+          <Link to="/services/link-building">Link Building</Link>
+          <Link to="/services/guest-posting">Guest Posting</Link>
+          <Link to="/services/link-insertion">Link Insertion</Link>
+          <Link to="/services/pbn-backlinks">PBN Backlinks</Link>
+          <Link to="/services/content-writing">Content Writing</Link>
         </div>
 
         <div className="footer-links-col">

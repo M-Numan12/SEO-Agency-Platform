@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
+import FloatingAction from './components/FloatingAction.jsx';
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Services from './pages/Services.jsx';
@@ -13,6 +14,7 @@ import NotFound from './pages/NotFound.jsx';
 import AdminLogin from './pages/admin/AdminLogin.jsx';
 import AdminLayout from './pages/admin/AdminLayout.jsx';
 import AdminDashboard from './pages/admin/AdminDashboard.jsx';
+import AdminInquiries from './pages/admin/AdminInquiries.jsx';
 import AdminBlogs from './pages/admin/AdminBlogs.jsx';
 import AdminServices from './pages/admin/AdminServices.jsx';
 
@@ -22,6 +24,7 @@ function PublicLayout() {
       <Header />
       <Outlet />
       <Footer />
+      <FloatingAction />
     </>
   );
 }
@@ -35,6 +38,7 @@ export default function App() {
       {/* Admin Dashboard */}
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<AdminDashboard />} />
+        <Route path="inquiries" element={<AdminInquiries />} />
         <Route path="blogs" element={<AdminBlogs />} />
         <Route path="services" element={<AdminServices />} />
       </Route>

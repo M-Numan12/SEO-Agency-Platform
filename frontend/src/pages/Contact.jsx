@@ -13,6 +13,7 @@ import {
   Zap
 } from 'lucide-react';
 import { contact } from '../config/contact.js';
+import { saveInquiry } from '../services/inquiries.js';
 import './Contact.scss';
 
 export default function Contact() {
@@ -20,7 +21,7 @@ export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [website, setWebsite] = useState('');
-  const [service, setService] = useState('AI & Generative Engine Optimization (GEO)');
+  const [service, setService] = useState('Website Audit');
   const [message, setMessage] = useState('');
 
   const phoneHref = contact.phone ? 'tel:' + contact.phone.replace(/[^+\d]/g, '') : '';
@@ -30,6 +31,13 @@ export default function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    saveInquiry({
+      name,
+      email,
+      website,
+      service,
+      message,
+    });
     setFormSent(true);
   }
 
@@ -122,23 +130,16 @@ export default function Contact() {
                 <div className="form-group">
                   <label>Primary Focus</label>
                   <select value={service} onChange={(e) => setService(e.target.value)}>
-                    <option value="AI & Generative Engine Optimization (GEO)">
-                      AI & Generative Engine Optimization (GEO)
-                    </option>
-                    <option value="Autonomous 24/7 SEO Automation">
-                      Autonomous 24/7 SEO Automation
-                    </option>
-                    <option value="Authority Link Building Engine">
-                      Authority Link Building Engine
-                    </option>
-                    <option value="High-Intent Content Architecture">
-                      High-Intent Content Architecture
-                    </option>
-                    <option value="Technical SEO & Core Web Vitals">
-                      Technical SEO & Core Web Vitals
-                    </option>
-                    <option value="Complete Enterprise Growth Retainer">
-                      Complete Enterprise Growth Retainer
+                    <option value="Website Audit">Website Audit</option>
+                    <option value="On-Page SEO">On-Page SEO</option>
+                    <option value="Digital PR">Digital PR</option>
+                    <option value="Link Building">Link Building</option>
+                    <option value="Guest Posting">Guest Posting</option>
+                    <option value="Link Insertion">Link Insertion</option>
+                    <option value="PBN Backlinks">PBN Backlinks</option>
+                    <option value="Content Writing">Content Writing</option>
+                    <option value="Complete Monthly Growth Retainer">
+                      Complete Monthly Growth Retainer
                     </option>
                   </select>
                 </div>
