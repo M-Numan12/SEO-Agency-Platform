@@ -13,6 +13,7 @@ import {
   Zap
 } from 'lucide-react';
 import { contact } from '../config/contact.js';
+import { saveInquiry } from '../services/inquiries.js';
 import './Contact.scss';
 
 export default function Contact() {
@@ -30,6 +31,13 @@ export default function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    saveInquiry({
+      name,
+      email,
+      website,
+      service,
+      message,
+    });
     setFormSent(true);
   }
 

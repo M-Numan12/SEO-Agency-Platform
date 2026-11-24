@@ -1,0 +1,291 @@
+.admin-inquiries-page {
+  max-width: 1100px;
+
+  .inquiries-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    h1 {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      margin: 8px 0 6px;
+      color: #0b2f3f;
+    }
+
+    p {
+      color: #6a828e;
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+
+  .button-outline-dark {
+    border: 1px solid #c9dbe0;
+    background: white;
+    color: #123e50;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      border-color: #0ba97e;
+      color: #0ba97e;
+    }
+  }
+
+  .inquiries-filters-bar {
+    margin-bottom: 25px;
+
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+
+      .filter-btn {
+        padding: 8px 16px;
+        border-radius: 8px;
+        border: 1px solid #d5e5e9;
+        background: white;
+        color: #496773;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s;
+
+        &:hover {
+          border-color: #0ba97e;
+          color: #0ba97e;
+        }
+
+        &.active {
+          background: #0b2f3f;
+          color: white;
+          border-color: #0b2f3f;
+
+          .new-badge {
+            background: #34dfaa;
+            color: #0b2f3f;
+          }
+        }
+
+        .new-badge {
+          background: #e4f9f2;
+          color: #0ba97e;
+          padding: 2px 7px;
+          border-radius: 999px;
+          font-size: 11px;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+
+  .inquiries-empty {
+    text-align: center;
+    background: white;
+    border: 1px solid #e1ebed;
+    border-radius: 16px;
+    padding: 60px 20px;
+    color: #728c98;
+
+    svg {
+      color: #9cb4be;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      font-size: 18px;
+      color: #0b2f3f;
+      margin-bottom: 6px;
+    }
+
+    p {
+      font-size: 14px;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+  }
+
+  .inquiries-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .inquiry-card {
+    background: white;
+    border: 1px solid #e2ecee;
+    border-radius: 16px;
+    padding: 24px 26px;
+    box-shadow: 0 4px 14px rgba(9, 39, 52, 0.04);
+    transition: all 0.2s;
+
+    &.status-new {
+      border-left: 5px solid #25d4a1;
+    }
+
+    &.status-contacted {
+      border-left: 5px solid #36a4ea;
+    }
+
+    &.status-proposal-sent {
+      border-left: 5px solid #8e5bf5;
+    }
+
+    &.status-closed {
+      border-left: 5px solid #94a7af;
+    }
+
+    .inquiry-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .client-info {
+      h3 {
+        font-size: 18px;
+        font-weight: 800;
+        color: #0a2f40;
+        margin-bottom: 6px;
+      }
+
+      .client-email,
+      .client-website {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 13px;
+        color: #0ba97e;
+        margin-right: 14px;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .client-website {
+        color: #5b7987;
+      }
+    }
+
+    .inquiry-meta-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .date-tag {
+        font-size: 12px;
+        color: #7b94a0;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .status-select {
+        font-size: 12px;
+        font-weight: 800;
+        padding: 5px 10px;
+        border-radius: 8px;
+        border: 1px solid #d4e4e8;
+        cursor: pointer;
+        outline: none;
+
+        &.new {
+          background: #e8faf3;
+          color: #0c8c68;
+          border-color: #9fe2cb;
+        }
+
+        &.contacted {
+          background: #edf7fd;
+          color: #177cb8;
+          border-color: #b7e0f8;
+        }
+
+        &.proposal-sent {
+          background: #f4eeff;
+          color: #6a2ad1;
+          border-color: #d8c3ff;
+        }
+
+        &.closed {
+          background: #f1f4f5;
+          color: #657d87;
+        }
+      }
+
+      .delete-btn {
+        background: none;
+        border: 0;
+        color: #b1c1c7;
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 6px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          color: #e54d42;
+          background: #feeceb;
+        }
+      }
+    }
+
+    .inquiry-service-badge {
+      font-size: 12px;
+      background: #f3faf8;
+      color: #0ba97e;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 12px;
+
+      strong {
+        color: #0c3344;
+      }
+    }
+
+    .inquiry-message {
+      background: #f9fbfb;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      border: 1px solid #edf4f5;
+
+      p {
+        font-size: 14px;
+        line-height: 1.65;
+        color: #4b6672;
+        margin: 0;
+        white-space: pre-line;
+      }
+    }
+
+    .inquiry-actions-row {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+

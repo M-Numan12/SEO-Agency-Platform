@@ -33,6 +33,7 @@ import ServiceCard from '../components/ServiceCard.jsx';
 import BlogCard from '../components/BlogCard.jsx';
 import { contact } from '../config/contact.js';
 import { caseStudies } from '../data/defaultContent.js';
+import { saveInquiry } from '../services/inquiries.js';
 import './Home.scss';
 
 export default function Home() {
@@ -88,6 +89,12 @@ export default function Home() {
 
   function handleContactSubmit(e) {
     e.preventDefault();
+    saveInquiry({
+      name: formName,
+      email: formEmail,
+      message: formMsg,
+      service: 'General AI & SEO Growth Inquiry',
+    });
     setFormSent(true);
   }
 
