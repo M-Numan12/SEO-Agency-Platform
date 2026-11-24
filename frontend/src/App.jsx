@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
+import FloatingAction from './components/FloatingAction.jsx';
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Services from './pages/Services.jsx';
@@ -23,6 +24,7 @@ function PublicLayout() {
       <Header />
       <Outlet />
       <Footer />
+      <FloatingAction />
     </>
   );
 }

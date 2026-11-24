@@ -1,0 +1,95 @@
+.floating-actions-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  pointer-events: none;
+
+  .float-btn {
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(6, 29, 39, 0.2);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 32px rgba(6, 29, 39, 0.28);
+    }
+  }
+
+  .top-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #082230;
+    color: white;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    &:hover {
+      background: #34dfaa;
+      color: #082230;
+    }
+  }
+
+  .whatsapp-pill {
+    background: #25d366;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 999px;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+
+    .live-pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0 0 8px #ffffff;
+      animation: pulse 1.8s infinite;
+    }
+
+    &:hover {
+      background: #20ba5a;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@media (max-width: 600px) {
+  .floating-actions-container {
+    bottom: 16px;
+    right: 16px;
+
+    .whatsapp-pill {
+      padding: 10px 14px;
+
+      .pill-label {
+        display: none;
+      }
+    }
+  }
+}

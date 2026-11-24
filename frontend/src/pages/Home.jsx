@@ -403,7 +403,7 @@ export default function Home() {
           <p className="loading-state">Loading services...</p>
         ) : Array.isArray(services.data) && services.data.length > 0 ? (
           <div className="content-grid">
-            {services.data.slice(0, 6).map((s, i) => (
+            {services.data.slice(0, 8).map((s, i) => (
               <ServiceCard key={s.id || s.slug} item={s} index={i} />
             ))}
           </div>
@@ -415,7 +415,7 @@ export default function Home() {
 
         <div className="center">
           <Link className="button button-light" to="/services">
-            Explore All 6 Full Service Architectures <ArrowUpRight size={17} />
+            Explore All 8 Specialized Architectures <ArrowUpRight size={17} />
           </Link>
         </div>
       </section>

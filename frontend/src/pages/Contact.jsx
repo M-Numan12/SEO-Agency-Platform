@@ -130,23 +130,16 @@ export default function Contact() {
                 <div className="form-group">
                   <label>Primary Focus</label>
                   <select value={service} onChange={(e) => setService(e.target.value)}>
-                    <option value="AI & Generative Engine Optimization (GEO)">
-                      AI & Generative Engine Optimization (GEO)
-                    </option>
-                    <option value="Autonomous 24/7 SEO Automation">
-                      Autonomous 24/7 SEO Automation
-                    </option>
-                    <option value="Authority Link Building Engine">
-                      Authority Link Building Engine
-                    </option>
-                    <option value="High-Intent Content Architecture">
-                      High-Intent Content Architecture
-                    </option>
-                    <option value="Technical SEO & Core Web Vitals">
-                      Technical SEO & Core Web Vitals
-                    </option>
-                    <option value="Complete Enterprise Growth Retainer">
-                      Complete Enterprise Growth Retainer
+                    <option value="Website Audit">Website Audit</option>
+                    <option value="ON-Page SEO">ON-Page SEO</option>
+                    <option value="Content Writing">Content Writing</option>
+                    <option value="Link Building">Link Building</option>
+                    <option value="Guest Posting">Guest Posting</option>
+                    <option value="Link Insertion">Link Insertion</option>
+                    <option value="PBN Backlinks">PBN Backlinks</option>
+                    <option value="Digital PR">Digital PR</option>
+                    <option value="Complete Monthly Growth Retainer">
+                      Complete Monthly Growth Retainer
                     </option>
                   </select>
                 </div>
