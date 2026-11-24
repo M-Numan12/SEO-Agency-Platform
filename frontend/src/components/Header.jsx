@@ -177,14 +177,11 @@ export default function Header() {
             </div>
           </div>
 
-          <NavLink to="/about" onClick={closeMenu}>
-            About
-          </NavLink>
           <NavLink to="/blog" onClick={closeMenu}>
             Blog
           </NavLink>
-          <NavLink to="/contact" onClick={closeMenu}>
-            Contact
+          <NavLink to="/about" onClick={closeMenu}>
+            About
           </NavLink>
 
           <Link className="button button-dark" to="/contact" onClick={closeMenu}>

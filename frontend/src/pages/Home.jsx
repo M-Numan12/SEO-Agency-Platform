@@ -32,7 +32,10 @@ import useContent from '../hooks/useContent.js';
 import ServiceCard from '../components/ServiceCard.jsx';
 import BlogCard from '../components/BlogCard.jsx';
 import { contact } from '../config/contact.js';
+<<<<<<< HEAD
 import { caseStudies } from '../data/defaultContent.js';
+=======
+>>>>>>> feature/reorder-client-services
 import { saveInquiry } from '../services/inquiries.js';
 import './Home.scss';
 
@@ -569,34 +572,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. PROVEN RESULTS & CASE STUDIES */}
-      <section className="section container home-case-studies">
-        <div className="section-title">
-          <span className="eyebrow">VERIFIED PERFORMANCE</span>
-          <h2>
-            Compounding results for <em>modern leaders.</em>
-          </h2>
-          <p>Real organic revenue growth delivered with precision engineering.</p>
-        </div>
-
-        <div className="case-grid">
-          {caseStudies.map((cs, idx) => (
-            <div className="case-card" key={idx}>
-              <div className="case-head">
-                <span className="client-badge">{cs.client}</span>
-                <span className="case-duration">{cs.duration}</span>
-              </div>
-              <div className="case-growth">
-                <h2>{cs.growth}</h2>
-                <small>{cs.metric}</small>
-              </div>
-              <p className="case-detail">{cs.detail}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 6. ABOUT SECTION */}
+      {/* 5. ABOUT SECTION */}
       <section className="section container home-about-section" id="about">
         <div className="about-split">
           <div className="about-text-col">

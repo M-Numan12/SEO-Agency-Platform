@@ -17,7 +17,11 @@ export const defaultServices = [
   },
   {
     id: 2,
+<<<<<<< HEAD
     name: 'ON-Page SEO',
+=======
+    name: 'On-Page SEO',
+>>>>>>> feature/reorder-client-services
     slug: 'on-page-seo',
     description: 'Strategic keyword placement, title tags, heading architecture, schema markup, and internal linking to maximize search relevance.',
     content:
@@ -33,6 +37,7 @@ export const defaultServices = [
   },
   {
     id: 3,
+<<<<<<< HEAD
     name: 'Content Writing',
     slug: 'content-writing',
     description: 'SEO-optimized, high-converting articles, landing pages, and service copy written by native specialists to rank and convert.',
@@ -45,6 +50,20 @@ export const defaultServices = [
     metaTitle: 'SEO Content Writing & Copywriting Services | RankShelter',
     metaDescription:
       'High-intent, SEO-driven content writing and landing page copywriting engineered to rank on page 1 and convert visitors.',
+=======
+    name: 'Digital PR',
+    slug: 'digital-pr',
+    description: 'Data-driven PR campaigns and press distribution earning viral press coverage, journalists citations, and tier-1 authoritative backlinks.',
+    content:
+      'Digital PR is the ultimate pinnacle of modern search authority. We craft proprietary industry studies, data visualizations, and newsworthy press hooks that journalists, national media, and top-tier publications genuinely want to cover. Gain massive branded coverage, social buzz, and tier-1 links from publications with DR 80-95+ that competitors cannot replicate.',
+    icon: 'pr',
+    badge: 'TIER-1 MEDIA',
+    imageUrl:
+      'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=80',
+    metaTitle: 'Digital PR & Viral Authority Campaigns | RankShelter',
+    metaDescription:
+      'Earn mainstream media citations, viral press mentions, and tier-1 authority backlinks with creative Digital PR.',
+>>>>>>> feature/reorder-client-services
     isPublished: true,
   },
   {
@@ -88,6 +107,7 @@ export const defaultServices = [
       'Why wait months for a new article to age and gain authority? Curated link insertions place your backlink directly inside aged, topically relevant articles that Google has already indexed and awarded ranking trust. This delivers immediate link equity transfer, faster ranking momentum, and immediate organic uplift for your target commercial URLs.',
     icon: 'insertion',
     badge: 'FAST INDEXING',
+<<<<<<< HEAD
     imageUrl:
       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
     metaTitle: 'Curated Link Insertions (Niche Edits) | RankShelter',
@@ -125,6 +145,45 @@ export const defaultServices = [
     metaTitle: 'Digital PR & Viral Authority Campaigns | RankShelter',
     metaDescription:
       'Earn mainstream media citations, viral press mentions, and tier-1 authority backlinks with creative Digital PR.',
+=======
+    imageUrl:
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+    metaTitle: 'Curated Link Insertions (Niche Edits) | RankShelter',
+    metaDescription:
+      'Fast-track your rankings with curated link insertions into aged, ranking articles with proven domain authority.',
+    isPublished: true,
+  },
+  {
+    id: 7,
+    name: 'PBN Backlinks',
+    slug: 'pbn-backlinks',
+    description: 'High-power private blog network links on aged, high-metric domains with clean anchor profiles for aggressive rank boosts.',
+    content:
+      'When competing in hyper-aggressive, high-value search niches, standard outreach sometimes needs extra firepower. We manage private, aged authority domains with clean historical backlink profiles, diverse IP C-blocks, unique DNS setups, and zero footprints. Engineered to give your target keywords the targeted ranking push required to break into the Top 3.',
+    icon: 'pbn',
+    badge: 'RANK BOOSTER',
+    imageUrl:
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+    metaTitle: 'High-Power PBN Backlinks | RankShelter',
+    metaDescription:
+      'Strategic private network backlinks on aged high-metric domains for aggressive keyword ranking acceleration.',
+    isPublished: true,
+  },
+  {
+    id: 8,
+    name: 'Content Writing',
+    slug: 'content-writing',
+    description: 'SEO-optimized, high-converting articles, landing pages, and service copy written by native specialists to rank and convert.',
+    content:
+      'Search traffic without conversions produces zero enterprise value. Our elite content production combines search query intelligence with proven psychological copywriting principles. We craft comprehensive pillar pages, transactional landing pages, comparison guides, and thought leadership articles designed to rank for commercial intent searches and convert casual readers into paying clients.',
+    icon: 'writing',
+    badge: 'HIGH CONVERSION',
+    imageUrl:
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+    metaTitle: 'SEO Content Writing & Copywriting Services | RankShelter',
+    metaDescription:
+      'High-intent, SEO-driven content writing and landing page copywriting engineered to rank on page 1 and convert visitors.',
+>>>>>>> feature/reorder-client-services
     isPublished: true,
   },
 ];
