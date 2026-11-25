@@ -84,7 +84,7 @@ export default function Header() {
       <div className="container header-inner">
         <Link to="/" className="brand" onClick={closeMenu} aria-label="RankShelter home">
           <span className="brand-logo">
-            <RankShelterIcon size={32} />
+            <RankShelterIcon size={36} />
           </span>
           <span>
             RankShelter<b>.</b>

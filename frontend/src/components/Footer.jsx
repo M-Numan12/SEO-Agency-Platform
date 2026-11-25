@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="footer-brand-col">
           <Link to="/" className="footer-brand" aria-label="RankShelter Home">
             <span className="brand-icon">
-              <RankShelterIcon size={30} />
+              <RankShelterIcon size={34} />
             </span>
             <span className="brand-name">
               RankShelter<b>.</b>

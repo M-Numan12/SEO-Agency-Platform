@@ -21,15 +21,21 @@
     margin-bottom: 18px;
 
     .brand-icon {
-      width: 44px;
-      height: 44px;
+      width: 46px;
+      height: 46px;
       border-radius: 13px;
-      background: #020912;
-      border: 1px solid rgba(0, 180, 255, 0.25);
-      box-shadow: 0 4px 16px rgba(0, 140, 255, 0.14);
+      background: #000000;
+      border: 1px solid rgba(0, 210, 255, 0.35);
+      box-shadow: 0 4px 18px rgba(0, 140, 255, 0.22);
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 3px;
+
+      svg {
+        width: 34px;
+        height: 34px;
+      }
     }
 
     .brand-name {
