@@ -177,26 +177,3 @@ export const defaultBlogs = [
   },
 ];
 
-export const caseStudies = [
-  {
-    client: 'FinTech Cloud Platform',
-    growth: '+342%',
-    metric: 'Organic Revenue',
-    duration: '6 Months',
-    detail: 'Executed high-authority link insertion and guest posting on 84 tier-1 finance publications.',
-  },
-  {
-    client: 'B2B SaaS Enterprise',
-    growth: '14.8x',
-    metric: 'Commercial Search Traffic',
-    duration: '90 Days',
-    detail: 'Full On-Page SEO restructuring, schema markup injection, and technical audit overhaul.',
-  },
-  {
-    client: 'E-Commerce Brand',
-    growth: '+520%',
-    metric: 'Non-Branded Clicks',
-    duration: '45 Days',
-    detail: 'Curated link building and digital PR campaign securing high-DR mainstream media mentions.',
-  },
-];

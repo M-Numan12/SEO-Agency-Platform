@@ -7,12 +7,9 @@ import {
   MessageCircle,
   Sparkles,
   ArrowUpRight,
-  CheckCircle2,
   RefreshCw,
-  User,
   ShieldCheck,
-  ChevronRight,
-  FileText
+  ChevronRight
 } from 'lucide-react';
 import { contact } from '../config/contact.js';
 import { saveInquiry } from '../services/inquiries.js';

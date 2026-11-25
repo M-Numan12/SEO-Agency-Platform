@@ -1,15 +1,13 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import {
-  ArrowLeft,
   ArrowRight,
   Clock,
   Calendar,
   Sparkles,
   Share2,
   CheckCircle2,
-  ArrowUpRight,
-  UserCheck
+  ArrowUpRight
 } from 'lucide-react';
 import useContent from '../hooks/useContent.js';
 import { getBlog, getBlogs } from '../services/api.js';

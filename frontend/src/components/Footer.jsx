@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Sparkles, Bot, ShieldCheck, Mail, ArrowUpRight } from 'lucide-react';
+import { Sparkles, Mail, ArrowUpRight } from 'lucide-react';
 import { contact } from '../config/contact.js';
 import RankShelterIcon from './RankShelterIcon.jsx';
 import './Footer.scss';

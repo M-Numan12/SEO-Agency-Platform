@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, ArrowUp, X, Sparkles } from 'lucide-react';
+import { MessageCircle, ArrowUp, X } from 'lucide-react';
 import Chatbot from './Chatbot.jsx';
 import './FloatingAction.scss';
 

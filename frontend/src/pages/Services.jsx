@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, ArrowUpRight, Zap, ShieldCheck } from 'lucide-react';
+import { Sparkles, ArrowUpRight, Zap } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard.jsx';
 import useContent from '../hooks/useContent.js';
 import { getServices } from '../services/api.js';

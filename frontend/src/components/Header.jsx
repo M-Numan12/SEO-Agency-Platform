@@ -3,7 +3,6 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 import {
   Menu,
   X,
-  TrendingUp,
   ArrowUpRight,
   ChevronDown,
   ArrowRight,
@@ -17,7 +16,7 @@ import {
   Megaphone,
   Briefcase
 } from 'lucide-react';
-import { getServices } from '../services/api';
+import { getServices } from '../services/api.js';
 import { defaultServices } from '../data/defaultContent.js';
 import RankShelterIcon from './RankShelterIcon.jsx';
 import './Header.scss';

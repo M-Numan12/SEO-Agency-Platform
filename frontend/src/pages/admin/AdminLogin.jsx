@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { TrendingUp, ShieldCheck, ArrowRight, Lock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { authApi } from '../../services/adminApi.js';
 import RankShelterIcon from '../../components/RankShelterIcon.jsx';
 import './AdminLogin.scss';

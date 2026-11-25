@@ -7,7 +7,6 @@ import {
   Briefcase,
   ExternalLink,
   LogOut,
-  TrendingUp,
   ShieldCheck
 } from 'lucide-react';
 import { authApi } from '../../services/adminApi.js';

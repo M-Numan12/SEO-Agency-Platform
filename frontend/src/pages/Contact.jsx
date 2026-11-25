@@ -4,13 +4,10 @@ import {
   Phone,
   MessageCircle,
   MapPin,
-  Clock3,
   ArrowUpRight,
   Send,
   CheckCircle2,
-  Sparkles,
-  ShieldCheck,
-  Zap
+  Sparkles
 } from 'lucide-react';
 import { contact } from '../config/contact.js';
 import { saveInquiry } from '../services/inquiries.js';

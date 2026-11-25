@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import {
   ArrowUpRight,
   ArrowRight,
-  TrendingUp,
   Search,
-  Target,
   CheckCircle2,
   Mail,
   Phone,
@@ -13,8 +11,6 @@ import {
   MapPin,
   Clock3,
   ShieldCheck,
-  Award,
-  Users,
   Sparkles,
   Bot,
   Zap,

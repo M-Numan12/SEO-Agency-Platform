@@ -5,16 +5,11 @@ import {
   ArrowRight,
   CheckCircle2,
   Sparkles,
-  Zap,
   ShieldCheck,
   Clock,
-  TrendingUp,
   MessageCircle,
-  HelpCircle,
   ChevronDown,
-  Layers,
-  BarChart3,
-  Globe
+  BarChart3
 } from 'lucide-react';
 import useContent from '../hooks/useContent.js';
 import { getService, getServices } from '../services/api.js';
