@@ -32,10 +32,6 @@ import useContent from '../hooks/useContent.js';
 import ServiceCard from '../components/ServiceCard.jsx';
 import BlogCard from '../components/BlogCard.jsx';
 import { contact } from '../config/contact.js';
-<<<<<<< HEAD
-import { caseStudies } from '../data/defaultContent.js';
-=======
->>>>>>> feature/reorder-client-services
 import { saveInquiry } from '../services/inquiries.js';
 import './Home.scss';
 
