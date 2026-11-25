@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { TrendingUp, Sparkles, Bot, ShieldCheck, Mail, ArrowUpRight } from 'lucide-react';
 import { contact } from '../config/contact.js';
+import RankShelterIcon from './RankShelterIcon.jsx';
 import './Footer.scss';
 
 export default function Footer() {
@@ -18,7 +19,7 @@ export default function Footer() {
         <div className="footer-brand-col">
           <Link to="/" className="footer-brand" aria-label="RankShelter Home">
             <span className="brand-icon">
-              <TrendingUp size={24} />
+              <RankShelterIcon size={24} />
             </span>
             <span className="brand-name">
               RankShelter<b>.</b>

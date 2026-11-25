@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { TrendingUp, ShieldCheck, ArrowRight, Lock } from 'lucide-react';
 import { authApi } from '../../services/adminApi.js';
+import RankShelterIcon from '../../components/RankShelterIcon.jsx';
 import './AdminLogin.scss';
 
 export default function AdminLogin() {
@@ -48,7 +49,7 @@ export default function AdminLogin() {
     <main className="admin-login">
       <form onSubmit={submit}>
         <div className="login-brand">
-          <TrendingUp size={24} />
+          <RankShelterIcon size={30} />
           <span>RankShelter<b>.</b></span>
         </div>
         <span className="eyebrow">RESTRICTED ACCESS</span>

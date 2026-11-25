@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { getServices } from '../services/api';
 import { defaultServices } from '../data/defaultContent.js';
+import RankShelterIcon from './RankShelterIcon.jsx';
 import './Header.scss';
 
 const serviceIconMap = {
@@ -83,7 +84,7 @@ export default function Header() {
       <div className="container header-inner">
         <Link to="/" className="brand" onClick={closeMenu} aria-label="RankShelter home">
           <span className="brand-logo">
-            <TrendingUp />
+            <RankShelterIcon size={25} />
           </span>
           <span>
             RankShelter<b>.</b>

@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { authApi } from '../../services/adminApi.js';
 import { getInquiries } from '../../services/inquiries.js';
+import RankShelterIcon from '../../components/RankShelterIcon.jsx';
 import './AdminLayout.scss';
 
 export default function AdminLayout() {
@@ -70,7 +71,7 @@ export default function AdminLayout() {
     <div className="admin-shell">
       <aside className="admin-sidebar">
         <Link to="/" className="admin-brand">
-          <TrendingUp size={22} /> RankShelter<span>.</span>
+          <RankShelterIcon size={24} /> RankShelter<span>.</span>
         </Link>
         <div className="sidebar-role">
           <ShieldCheck size={13} />
