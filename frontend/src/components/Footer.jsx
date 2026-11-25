@@ -36,30 +36,21 @@ export default function Footer() {
         <div className="footer-links-col">
           <h4>Services</h4>
           <Link to="/services/website-audit">Website Audit</Link>
-<<<<<<< HEAD
-          <Link to="/services/on-page-seo">ON-Page SEO</Link>
-          <Link to="/services/content-writing">Content Writing</Link>
-=======
           <Link to="/services/on-page-seo">On-Page SEO</Link>
           <Link to="/services/digital-pr">Digital PR</Link>
->>>>>>> feature/reorder-client-services
           <Link to="/services/link-building">Link Building</Link>
           <Link to="/services/guest-posting">Guest Posting</Link>
           <Link to="/services/link-insertion">Link Insertion</Link>
           <Link to="/services/pbn-backlinks">PBN Backlinks</Link>
-<<<<<<< HEAD
-          <Link to="/services/digital-pr">Digital PR</Link>
-=======
           <Link to="/services/content-writing">Content Writing</Link>
->>>>>>> feature/reorder-client-services
         </div>
 
         <div className="footer-links-col">
           <h4>Studio</h4>
           <Link to="/">Home</Link>
-          <Link to="/about">Our Methodology</Link>
           <Link to="/services">All Services</Link>
           <Link to="/blog">Insights & Journal</Link>
+          <Link to="/about">Our Methodology</Link>
           <Link to="/contact">Growth Inquiry</Link>
         </div>
 

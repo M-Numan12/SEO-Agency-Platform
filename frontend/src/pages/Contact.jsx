@@ -131,22 +131,13 @@ export default function Contact() {
                   <label>Primary Focus</label>
                   <select value={service} onChange={(e) => setService(e.target.value)}>
                     <option value="Website Audit">Website Audit</option>
-<<<<<<< HEAD
-                    <option value="ON-Page SEO">ON-Page SEO</option>
-                    <option value="Content Writing">Content Writing</option>
-=======
                     <option value="On-Page SEO">On-Page SEO</option>
                     <option value="Digital PR">Digital PR</option>
->>>>>>> feature/reorder-client-services
                     <option value="Link Building">Link Building</option>
                     <option value="Guest Posting">Guest Posting</option>
                     <option value="Link Insertion">Link Insertion</option>
                     <option value="PBN Backlinks">PBN Backlinks</option>
-<<<<<<< HEAD
-                    <option value="Digital PR">Digital PR</option>
-=======
                     <option value="Content Writing">Content Writing</option>
->>>>>>> feature/reorder-client-services
                     <option value="Complete Monthly Growth Retainer">
                       Complete Monthly Growth Retainer
                     </option>
