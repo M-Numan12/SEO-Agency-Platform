@@ -1,12 +1,11 @@
 import React from 'react';
 
 /**
- * RankShelter Custom Brand Icon (Refined)
- * - Aerodynamic Peaked Shelter Canopy (Soft curved protective roof)
- * - Diagonal/Angled Ranking Surge Arrow (↗) representing soaring organic growth
- * - Ascending Base Metrics Steps
+ * RankShelter Brand Icon (Refined Premium Architecture)
+ * 1. Shelter: Solid architectural protective roof canopy with distinct eaves & depth
+ * 2. Rank Arrow: Dynamic angled/diagonal rank surge arrow (↗) with growth bars
  */
-export default function RankShelterIcon({ size = 25, className = '' }) {
+export default function RankShelterIcon({ size = 26, className = '' }) {
   return (
     <svg
       width={size}
@@ -17,57 +16,54 @@ export default function RankShelterIcon({ size = 25, className = '' }) {
       className={className}
       aria-hidden="true"
     >
-      {/* 1. ELEGANT CURVED SHELTER CANOPY (With subtle center peak & curved wings) */}
+      {/* 1. SOLID ARCHITECTURAL SHELTER ROOF (Chhat / Canopy) */}
+      {/* Solid roof slab with eaves providing genuine shelter over the arrow */}
       <path
-        d="M3.5 14Q9.5 5.5 16 4.5Q22.5 5.5 28.5 14"
-        stroke="currentColor"
-        strokeWidth="2.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        d="M2.5 13.5L16 2.5L29.5 13.5L25.8 15.5L16 7.5L6.2 15.5L2.5 13.5Z"
+        fill="currentColor"
       />
-      {/* Inner decorative shelter arch for architectural depth */}
+      {/* Subtle roof ridge division for premium 3D bevel */}
       <path
-        d="M7 14.5Q11 8.5 16 7.8Q21 8.5 25 14.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
+        d="M16 2.5V7.5"
+        stroke="#071926"
+        strokeWidth="1.2"
         strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeOpacity="0.4"
+        opacity="0.35"
       />
 
-      {/* 2. DYNAMIC ANGLED/DIAGONAL RANK SURGE ARROW (↗) */}
-      {/* Soaring diagonal arrow shaft */}
+      {/* 2. DYNAMIC ANGLED RANK ARROW (↗ Tehra Growth Arrow) */}
+      {/* Soaring diagonal surge shaft */}
       <path
-        d="M9.5 24.5L22.5 11"
+        d="M9 25.5L22 12.5"
         stroke="currentColor"
         strokeWidth="2.8"
         strokeLinecap="round"
       />
-      {/* Sharp angled arrowhead pointing up-right */}
+      {/* Sharp ranking arrowhead pointing ↗ */}
       <path
-        d="M15.5 11H22.5V18"
+        d="M15 12.5H22V19.5"
         stroke="currentColor"
         strokeWidth="2.8"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
 
-      {/* 3. ASCENDING RANKING GROWTH METRIC BARS */}
-      {/* Base Bar (Stage 1) */}
+      {/* 3. ASCENDING RANK GROWTH METRIC BARS */}
+      {/* Stage 1 Base Bar */}
       <path
-        d="M7.5 25.5V21"
+        d="M7 26V21.5"
         stroke="currentColor"
         strokeWidth="2.4"
         strokeLinecap="round"
-        strokeOpacity="0.5"
+        opacity="0.5"
       />
-      {/* Mid Growth Bar (Stage 2) */}
+      {/* Stage 2 Growth Bar */}
       <path
-        d="M13 25.5V17.5"
+        d="M12.5 26V18"
         stroke="currentColor"
         strokeWidth="2.4"
         strokeLinecap="round"
-        strokeOpacity="0.75"
+        opacity="0.8"
       />
     </svg>
   );
