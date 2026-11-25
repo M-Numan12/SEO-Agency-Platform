@@ -49,7 +49,7 @@ export default function AdminLogin() {
     <main className="admin-login">
       <form onSubmit={submit}>
         <div className="login-brand">
-          <RankShelterIcon size={30} />
+          <RankShelterIcon size={40} />
           <span>RankShelter<b>.</b></span>
         </div>
         <span className="eyebrow">RESTRICTED ACCESS</span>

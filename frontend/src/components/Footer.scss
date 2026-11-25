@@ -21,11 +21,12 @@
     margin-bottom: 18px;
 
     .brand-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #0f6254, #21d5a5);
-      color: #04241d;
+      width: 44px;
+      height: 44px;
+      border-radius: 13px;
+      background: #020912;
+      border: 1px solid rgba(0, 180, 255, 0.25);
+      box-shadow: 0 4px 16px rgba(0, 140, 255, 0.14);
       display: flex;
       align-items: center;
       justify-content: center;

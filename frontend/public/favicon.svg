@@ -1,12 +1,33 @@
-<svg width="64" height="64" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" rx="8" fill="#071926"/>
-  <!-- SOLID ARCHITECTURAL SHELTER ROOF -->
-  <path d="M2.5 13.5L16 2.5L29.5 13.5L25.8 15.5L16 7.5L6.2 15.5L2.5 13.5Z" fill="#34dfaa"/>
-  <path d="M16 2.5V7.5" stroke="#071926" stroke-width="1.2" stroke-linecap="round" opacity="0.35"/>
-  <!-- DYNAMIC ANGLED RANK ARROW (↗) -->
-  <path d="M9 25.5L22 12.5" stroke="#34dfaa" stroke-width="2.8" stroke-linecap="round"/>
-  <path d="M15 12.5H22V19.5" stroke="#34dfaa" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- ASCENDING RANK METRIC BARS -->
-  <path d="M7 26V21.5" stroke="#34dfaa" stroke-width="2.4" stroke-linecap="round" opacity="0.5"/>
-  <path d="M12.5 26V18" stroke="#34dfaa" stroke-width="2.4" stroke-linecap="round" opacity="0.8"/>
+<svg width="64" height="64" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="112" fill="#030b14"/>
+  <defs>
+    <linearGradient id="fav_grad" x1="256" y1="60" x2="256" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="40%" stop-color="#0088ff"/>
+      <stop offset="100%" stop-color="#004ce6"/>
+    </linearGradient>
+    <linearGradient id="fav_shadow" x1="256" y1="110" x2="256" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#002d7a"/>
+      <stop offset="100%" stop-color="#000e30"/>
+    </linearGradient>
+    <linearGradient id="fav_arc" x1="20" y1="380" x2="492" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#005ae6" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#005ae6" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- INNER SHADOW -->
+  <path d="M256 112L145 204V340L160 345V214L256 135L352 214V345L367 340V204L256 112Z" fill="url(#fav_shadow)"/>
+
+  <!-- OUTER SHELTER WITH CHIMNEY -->
+  <path d="M256 75L20 234H110V355C110 355 135 348 152 342V208L256 122L360 208V342C377 348 402 355 402 355V234H492L398 158V108H348V118L256 75Z" fill="url(#fav_grad)"/>
+
+  <!-- ARROW -->
+  <path d="M256 168L168 244H212V268H300V244H344L256 168Z" fill="url(#fav_grad)"/>
+  <rect x="212" y="278" width="88" height="24" rx="3" fill="url(#fav_grad)"/>
+  <rect x="212" y="312" width="88" height="24" rx="3" fill="url(#fav_grad)"/>
+
+  <!-- ARC -->
+  <path d="M18 400C120 365 392 365 494 400C392 345 120 345 18 400Z" fill="url(#fav_arc)"/>
 </svg>

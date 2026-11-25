@@ -25,14 +25,16 @@
     white-space: nowrap;
 
     .brand-logo {
-      height: 45px;
-      width: 45px;
+      height: 46px;
+      width: 46px;
       display: grid;
       place-items: center;
-      background: #103b4b;
-      color: #33d7a7;
+      background: #020912;
+      border: 1px solid rgba(0, 180, 255, 0.25);
       border-radius: 13px;
       flex-shrink: 0;
+      box-shadow: 0 4px 16px rgba(0, 140, 255, 0.14);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     b { color: #0cb88a; }

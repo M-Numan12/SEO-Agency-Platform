@@ -71,7 +71,7 @@ export default function AdminLayout() {
     <div className="admin-shell">
       <aside className="admin-sidebar">
         <Link to="/" className="admin-brand">
-          <RankShelterIcon size={24} /> RankShelter<span>.</span>
+          <RankShelterIcon size={28} /> RankShelter<span>.</span>
         </Link>
         <div className="sidebar-role">
           <ShieldCheck size={13} />
