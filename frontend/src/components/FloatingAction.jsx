@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, ArrowUp } from 'lucide-react';
-import { contact } from '../config/contact.js';
+import { MessageCircle, ArrowUp, X, Sparkles } from 'lucide-react';
+import Chatbot from './Chatbot.jsx';
 import './FloatingAction.scss';
 
 export default function FloatingAction() {
   const [showTop, setShowTop] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);
+  const [unreadBadge, setUnreadBadge] = useState(true);
 
   useEffect(() => {
     function handleScroll() {
@@ -14,42 +16,52 @@ export default function FloatingAction() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const whatsappHref = contact.whatsapp
-    ? 'https://wa.me/' + contact.whatsapp.replace(/\D/g, '')
-    : 'https://wa.me/';
+  function toggleChat() {
+    setChatOpen((prev) => {
+      const next = !prev;
+      if (next) setUnreadBadge(false);
+      return next;
+    });
+  }
 
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   return (
-    <aside className="floating-actions-container" aria-label="Quick contact & navigation">
-      {/* Scroll to Top */}
-      {showTop && (
+    <>
+      {/* Interactive AI Chatbot Window */}
+      <Chatbot isOpen={chatOpen} onClose={() => setChatOpen(false)} />
+
+      <aside className="floating-actions-container" aria-label="Quick contact & navigation">
+        {/* Scroll to Top */}
+        {showTop && (
+          <button
+            type="button"
+            className="float-btn top-btn"
+            title="Back to Top"
+            aria-label="Back to top"
+            onClick={scrollToTop}
+          >
+            <ArrowUp size={18} />
+          </button>
+        )}
+
+        {/* AI Strategist Chatbot Toggle Button */}
         <button
           type="button"
-          className="float-btn top-btn"
-          title="Back to Top"
-          aria-label="Back to top"
-          onClick={scrollToTop}
+          onClick={toggleChat}
+          className={`float-btn chat-trigger-pill ${chatOpen ? 'chat-active' : ''}`}
+          title={chatOpen ? 'Close AI Chat' : 'Chat with RankShelter AI Strategist'}
+          aria-expanded={chatOpen}
+          aria-label={chatOpen ? 'Close AI Chat' : 'Open AI Chatbot'}
         >
-          <ArrowUp size={18} />
+          <span className="live-pulse-dot"></span>
+          {chatOpen ? <X size={20} /> : <MessageCircle size={20} />}
+          <span className="pill-label">{chatOpen ? 'Close Chat' : 'Chat with Strategist'}</span>
+          {unreadBadge && !chatOpen && <span className="notification-badge">AI</span>}
         </button>
-      )}
-
-      {/* WhatsApp Quick Chat */}
-      <a
-        href={whatsappHref}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="float-btn whatsapp-pill"
-        title="Chat with an SEO Strategist on WhatsApp"
-        aria-label="Chat on WhatsApp"
-      >
-        <span className="live-pulse-dot"></span>
-        <MessageCircle size={20} />
-        <span className="pill-label">Chat with Strategist</span>
-      </a>
-    </aside>
+      </aside>
+    </>
   );
 }
