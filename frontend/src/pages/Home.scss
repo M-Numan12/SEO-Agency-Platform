@@ -695,6 +695,25 @@
       padding: 22px 28px;
       border-bottom: 1px solid #eaf1f3;
       font-size: 14px;
+      vertical-align: middle;
+    }
+
+    th:first-child,
+    td:first-child {
+      width: 36%;
+      text-align: left;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 32%;
+      text-align: center;
+    }
+
+    th:nth-child(3),
+    td:nth-child(3) {
+      width: 32%;
+      text-align: center;
     }
 
     th {
@@ -706,17 +725,21 @@
 
     .dim-head {
       color: #8b9fa9;
+      text-align: center;
     }
 
     .highlight-head {
       color: #0ba87c;
       background: #eefbf6;
       font-weight: 900;
+      text-align: center;
     }
 
     .bad {
       color: #a44846;
       background: #fffcfc;
+      text-align: center;
+
       svg {
         color: #d1514f;
         vertical-align: middle;
@@ -728,6 +751,8 @@
       color: #0b7a5c;
       background: #f5fcf8;
       font-weight: 700;
+      text-align: center;
+
       svg {
         color: #0ba87c;
         vertical-align: middle;
